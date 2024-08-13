@@ -56,7 +56,7 @@ begin
 	end
 	else if(cant > max2) then begin
 		max2:= cant;
-			escMax2:= esc;
+		escMax2:= esc;
 	end;
 end;
 
