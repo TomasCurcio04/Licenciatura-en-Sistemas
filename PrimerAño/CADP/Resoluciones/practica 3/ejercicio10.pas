@@ -9,7 +9,6 @@ type
 	
 procedure leer(var p:plantas);
 begin
-	
 	writeln('ingrese en los paises que habita la planta');
 	readln(p.paises);
 	if(p.paises<>'zzz') then begin
