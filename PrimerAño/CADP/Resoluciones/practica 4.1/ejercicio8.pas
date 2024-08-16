@@ -1,6 +1,6 @@
 program cadp;
 const
-	dimF=4;
+	dimF=400;
 type
 	alumno=record
 		insc:integer;
