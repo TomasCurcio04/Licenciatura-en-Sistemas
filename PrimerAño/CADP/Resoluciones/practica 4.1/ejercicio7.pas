@@ -3,8 +3,7 @@ const
 	dimfis=9;
 type
 	vectorContador = array [0..dimfis] of integer;
-  
-  
+ 
 procedure inicializar (var v:vectorContador);
 var
 	i:integer;
