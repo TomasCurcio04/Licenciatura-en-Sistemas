@@ -96,6 +96,4 @@ begin
 	for i:=1 to 31 do 
 		writeln('La cantidad de viajes realizados el dia ',i,' del mes fueron: ',c[i]);
 	puntoc(v,dimlog);
-	for i:=1 to dimlog do
-		writeln(v[i].dia);
 end.
