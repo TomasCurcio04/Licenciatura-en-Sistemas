@@ -50,7 +50,7 @@ c-La pregunta abierta tiene una velocidad de conclusión lenta
 d-La facilidad de análisis de una pregunta abierta es fácil
 e-La pregunta cerrada tiene una naturaleza exploratoria alta
 
-Respuesta: Marcar las opciones c
+Respuesta: Marcar las opciones b, c
 
 9-El problema del envejecimiento del software NO esta en la operación, sino en los cambios que se introducen.
 
