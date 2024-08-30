@@ -1,0 +1,68 @@
+///IMPORTANTE: Las preguntas y/o las respuestas pueden cambiar el orden en el que aparecen , recomiendo leer las preguntas y las respuestas en el cuestionario y en este txt para verificar si concuerda el orden en el que aparecen///
+
+
+1-La observación del ambiente de trabajo es una técnica de elicitación de recolección de hechos a partir de la documentación existente.
+
+Respuesta: Falsa, a partir de documentación existe es la técnica de "Muestreo de la documentación, los formularios y los datos existentes"
+
+2-Según Richard Stallman el término software libre (o programas libres) se refiere a libertad. En concreto se refiere a cuatro libertades:
+-De ejecutar el programa en cualquier sitio, con cualquier propósito y para siempre.
+-De estudiarlo y adaptarlo a nuestras necesidades. Esto exige el acceso al código fuente.
+-De redistribución, de modo que se nos permita colaborar con vecinos y amigos. 
+-De no cobrar nunca por el desarrollo ni poder venderlo.
+
+Repuesta: Falsa, Richard Stallman definió el Software Libre como las 3 primeras pero la ultima libertad es falsa, la ultima libertad es: "Libertad para mejorar el programa y publicar las mejoras. Tambien exige el código fuente" 
+
+3-Los usuarios finales, ingenieros, gerentes y expertos del dominio son stakeholders.
+
+Respuesta: Verdadera, todos son stakeholders
+
+4-El punto de vista del "interactuador" representa las características y restricciones del dominio que influyen en los requerimientos del sistema.
+
+Respuesta: Falsa, el punto de vista del Dominio representan las características y restricciones del dominio que influyen en los requerimientos del sistema, no la del interactuador.
+
+5-Cuando hablamos de "requerimientos del cliente" estamos haciendo referencia a las "necesidades del cliente"
+
+Respuesta: Verdadero
+
+6-Seleccione las afirmaciones que se corresponden con la técnica de elicitación de brainstorming
+
+a-Requiere extenso entrenamiento de todos los participantes
+b-Ayuda a entender el dominio del problema
+c-Promueve el desarrollo de ideas creativas para obtener soluciones al problema
+d-Involucra activamente a la gerencia en el desarrollo del proyecto
+e-Reduce el tiempo de la etapa de elicitación de requerimientos
+
+Respuesta: Marcar las opciones b, c, d, 
+
+7-Complete el texto con las palabras correctas :
+
+El entrevistador debe (vestirse) adecuadamente y ser (cortés)  durante toda la entrevista.
+Una vez iniciada la entrevista debe escuchar (cuidadosamente) y debe evitar (revelar) pistas.
+(Debe) observar las gestos y evitar (hablar) en lugar de (escuchar).
+El entrevistador debe ser paciente y (evitar) el uso de grabadores.
+
+8-Seleccione aquellas afirmaciones que se corresponden con el tipo de preguntas que se arman en un cuestionario.
+
+a-La preparación de una pregunta cerrada es fácil
+b-La amplitud y profundidad en una pregunta abierta es alta
+c-La pregunta abierta tiene una velocidad de conclusión lenta
+d-La facilidad de análisis de una pregunta abierta es fácil
+e-La pregunta cerrada tiene una naturaleza exploratoria alta
+
+Respuesta: Marcar las opciones c
+
+9-El problema del envejecimiento del software NO esta en la operación, sino en los cambios que se introducen.
+
+Respuesta: Verdadera
+
+10-Seleccione de las siguientes técnicas de elicitación aquellas que se corresponden con métodos discretos de recolección de información:
+
+a-Entrevistas
+b-Cuestionarios
+c-Muestreo de la documentación 
+d-Observación del ambiente de trabajo
+e-Investigación y visitas al lugar
+f-Brainstorming
+
+Respuesta: Marcar las opciones c, d, e
