@@ -1,0 +1,7 @@
+11.Considere el siguiente problema: Se quiere modelar el transporte público de la ciudad de La
+Plata, lo cual involucra las líneas de colectivos y sus respectivas paradas. Cada línea de
+colectivos tiene asignado un conjunto de paradas donde se detiene de manera repetida
+durante un mismo día. De acuerdo a las estructuras de datos vistas en esta práctica, que
+estructura de datos sugeriría para el modelado de las paradas de una línea de colectivos?
+
+Rta: Yo usaría la cola circular ya que el recorrido del micro se hace de la misma foma y esta permite mantener el mismo orden rotando los elementos haciéndola circular
