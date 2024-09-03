@@ -16,11 +16,11 @@ public class PruebaEjercicio6 {
 		ab.getRightChild().addLeftChild(new BinaryTree<Integer>(5));
 		ab.getRightChild().addRightChild(new BinaryTree<>(6));
 		
-        ab.getRightChild().getLeftChild().addLeftChild(new BinaryTree<>(7));
-        ab.getRightChild().getLeftChild().addRightChild(new BinaryTree<>(8));
-        
-        ab.imprimirArbol();
-        System.out.println();
+	        ab.getRightChild().getLeftChild().addLeftChild(new BinaryTree<>(7));
+	        ab.getRightChild().getLeftChild().addRightChild(new BinaryTree<>(8));
+	        
+	        ab.imprimirArbol();
+	        System.out.println();
         
 		Transformacion t=new Transformacion(ab);
 		BinaryTree<Integer> trans=new BinaryTree<Integer>();
