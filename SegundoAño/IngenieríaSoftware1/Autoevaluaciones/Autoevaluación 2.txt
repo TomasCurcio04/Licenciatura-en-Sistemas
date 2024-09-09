@@ -1,0 +1,117 @@
+///IMPORTANTE: Las preguntas y/o las respuestas pueden cambiar el orden en el que aparecen , recomiendo leer las preguntas y las respuestas en el cuestionario y en este txt para verificar si concuerda el orden en el que aparecen///
+
+1- Seleccionar aquellas afirmaciones que resulten verdaderas para la etapa de validación de requerimientos
+
+a- La validación solo se puede hacer con la activa participación del usuario
+b- Se puede probar formalmente que un modelo de requerimientos es correcto 
+c- En la etapa de validación se describe el ambiente en el que debe operar el sistema
+d- La validación de requerimientos comprende las verificaciones de realismo (es decir que los requerimientos se pueden implementar)
+e- En la revisión "formal" de requerimientos los desarrolladores deben tratar los requerimientos con tantos stakeholders como sea posible
+
+Respuesta: Seleccionar la opción a, d
+
+2-Seleccione para cada técnica de especificación si es estática o dinámica:
+
+-Abstracciones (Estática)
+
+-Diagrama de transición y estados (Dinámica)
+
+-Relaciones de recurrencia (Estática)
+
+-Redes de Petri (Dinámica)
+
+-Historias de usuario (Dinámica)
+
+-Expresiones Regulares (Estática)
+
+
+3-En el SRS hay diferentes usuarios de ese documento, indique a que tipo de usuario se corresponde cada definición:
+-Usan el SRS para planear la cotización del sistema (Administradores)
+
+-Usan los requerimientos para entender el sistema a desarrollar (Ingenieros de sistema)
+
+-Usan los requerimientos para comprender el sistema y las relaciones de los componentes del sistema (Ingenieros de mantenimiento del sistema)
+
+-Especifican los requerimientos y los leen para ver si cubren sus necesidades (Clientes del sistema)
+
+-Usan requerimientos para hacer pruebas de validación (Ingenieros de prueba de sistema)
+
+
+4-Seleccionar cuales de las siguientes afirmaciones aquellas que representen conceptos de las historias de usuarios (HU):
+Seleccione una o más de una:
+a- Estimaciones mayores a una semana son indicativo de que la historia de usuario es muy compleja y debe dividirse
+b- Permiten responder rápidamente a los requisitos cambiantes
+c- Generalmente se espera que la estimación de tiempo de cada historia de usuario se sitúe entre unas 2 horas y una semana
+d- Al momento de implementar las historias, los desarrolladores deben programarlas y no discutirlas con los clientes
+e- La HU debería poder escribirse sobre una nota adhesiva pequeña
+
+Respuesta: Seleccionar la opción b, e
+
+5-Elija para cada definición la característica correcta
+- Las historias de usuario cubren requerimientos funcionales, por lo que generalmente son verificables (Verificables)
+
+- Un resultado de la discusión de una historia de usuario es la estimación del tiempo que tomará completarla (Estimables)
+
+- De ser necesario, combinar las historias dependientes o buscar otra forma de dividir las historias de manera que resulten independientes (Independientes unas de otras)
+
+-La historia en sí misma no es lo suficientemente explícita como para considerarse un contrato, la discusión con los usuarios debe permitir esclarecer su alcance y este debe dejarse explicito bajo la forma de pruebas de validación (Negociables)
+
+6-Seleccione el tipo de requerimiento no funcional en cada característica del sistema presentada
+-Disponibilidad (Requerimientos de eficiencia)
+-Estética (Requerimientos de usabilidad)
+-Facilidad de recuperación (Requerimientos de fiabilidad)
+-Uso de recursos (Requerimientos de eficiencia)
+-Documentación de usuario (Requerimientos de usabilidad)
+
+7-Selecciones las afirmaciones correctas:
+Seleccione una o más de una:
+a- Un requerimiento conciso es fácil de leer y entender
+b- Un requerimiento permite que los desarrolladores expliquen cómo han entendido lo que el cliente pretende del sistema
+c- Un requerimiento no indica al equipo de pruebas qué demostraciones llevar a cabo
+d- Un requerimiento se considera completo si no es necesario ampliarlo 
+e- Un requerimiento es verificable si su omisión provoca una deficiencia
+f- Un requerimiento es consistente si tiene una sola implementación
+
+Respuesta: Marcar la opción a, b, d
+
+8- Complete las siguientes oraciones arrastrando la palabra al lugar elegido:
+
+La Ingeniera de requerimientos es el proceso mediante el cual se intercambian diferentes (puntos de vista) para recopilar y modelar lo que el sistema va a realizar. Este proceso utiliza una (combinación) de métodos, herramientas y actores, cuyo producto es un modelo del cual se genera un (documento) de requerimientos denominado (SRS)
+En esta ingeniería se transforman los (requerimientos) declarados por los clientes, ya sean hablados o escritos, a especificaciones precisas, no ambiguas, (consistentes) y completas del (comportamiento) del sistema, incluyendo funciones, (interfaces), rendimiento y limitaciones.
+
+
+9-Seleccione las afirmaciones que considere se corresponden a un requerimiento funcional:
+Seleccione una o más de una:
+
+a- Se derivan de las políticas y procedimientos existentes en la organización del desarrollador de software (entrega, estándares)
+b- Describen lo que el sistema debe hacer, o incluso cómo NO debe comportarse.
+c- Describen con detalle la funcionalidad del requerimiento
+d- Se pueden expresar de diferentes formas
+e- Especifican la usabilidad del producto
+f- Se derivan de las políticas y procedimientos existentes en la organización del cliente
+
+Respuesta: Marcar la opción b, c, d
+
+10-Seleccione para cada característica si se trata de un beneficio o una desventaja de la HU
+-Involucran y captan al cliente para el proceso y para el producto (Ventaja)
+
+-Proporcionan la documentación necesaria fomentando a la vez el debate(Ventaja)
+
+-Permite dividir los proyectos en pequeñas entregas (Ventaja)
+
+-Se requiere un contacto permanente con el cliente durante todo el proyecto (Desventaja)
+
+-Fomentan aplazar los detalles no imprescindibles (Ventaja)
+
+-Se necesitan desarrolladores cualificados que tengan una visión muy clara sobre sus posibilidades y cómo conseguir objetivos a corto plazo (Desventaja)
+
+
+
+
+
+
+
+
+
+
+
