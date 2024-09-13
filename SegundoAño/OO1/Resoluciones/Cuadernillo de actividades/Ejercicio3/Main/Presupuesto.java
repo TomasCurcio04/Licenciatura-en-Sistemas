@@ -25,11 +25,7 @@ public class Presupuesto {
 	}
 	
 	public double calcularTotal() {
-		double costoTotal=0;
-		for(Item item:items) {
-			costoTotal+=item.costo();
-		}
-		return costoTotal;
+		return this.items.stream().mapToDouble(Item::costo).sum();
 	}
 	
 }
