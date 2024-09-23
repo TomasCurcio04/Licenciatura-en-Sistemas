@@ -8,7 +8,7 @@ c- En la etapa de validación se describe el ambiente en el que debe operar el s
 d- La validación de requerimientos comprende las verificaciones de realismo (es decir que los requerimientos se pueden implementar)
 e- En la revisión "formal" de requerimientos los desarrolladores deben tratar los requerimientos con tantos stakeholders como sea posible
 
-Respuesta: Seleccionar la opción a, d
+Respuesta: Seleccionar la opción a,c y d
 
 2-Seleccione para cada técnica de especificación si es estática o dinámica:
 
