@@ -1,0 +1,101 @@
+///IMPORTANTE: Las preguntas y/o las respuestas pueden cambiar el orden en el que aparecen, recomiendo leer las preguntas y las respuestas en el cuestionario y en este txt para verificar si concuerda el orden en el que aparecen///
+
+1-Una máquina de estados finitos describe al sistema como un conjunto de [estados] donde el sistema reacciona a ciertos [eventos] posibles [externos] o internos.
+
+Una máquina de estado finito es algo más general que un [diagrama de transición y estados].
+
+Las máquinas de estado finito se modelizan como una [función] aplicada a un estado y un [estímulo] que nos devuelve un nuevo estado de nuestro sistema.
+
+Opciones de palabras:
+
+estados, eventos, diagrama de transición y estados, externos, estímulo, función
+
+
+
+2-Arrastre las palabras para armar una adecuada definición de los Diagramas de Transición y estados:
+
+Un diagrama de transición de estados muestra el [comportamiento] dependiente del [tiempo] de un sistema de información. Representa los [estados] que puede tomar un componente o un sistema y muestra los [eventos] que implican el cambio de un estado a otro.
+
+Opciones de palabras:
+
+estados, eventos, comportamiento, tiempo
+
+
+3-Una transición es una relación entre dos estados que están unidos por una flecha, identificando a una situación particular en un estado primario donde se realizará una acción específica y que pasará a un segundo estado, cuando ocurra un evento y se cumplan unas condiciones específicas.
+
+Seleccione una:
+
+○ Verdadero
+
+○ Falso
+
+Seleccionar: Verdadero 
+
+4-Mediante la descripción de las transiciones es posible describir con más detalle las condiciones bajo las cuales se abandona un estado para pasar al siguiente.
+
+Seleccione una: 
+○ Verdadero 
+○ Falso
+
+Seleccionar: Verdadero
+
+5- El Diagrama de transición y estados (DTE) es una técnica de especificación estática porque no describe como el sistema responde a eventos 
+  
+○ Verdadero
+○ Falso
+
+Seleccionar: Falsa
+
+6-Ordena los pasos para crear un DTE:
+
+3-Se identifica el estado inicial
+4-Se identifican los cambios de estado con flechas
+2-Si hay un estado complejo se puede explotar
+6-Se verifica la consistencia
+1-Identificar los estados
+5-Se analizan las condiciones y las acciones
+
+7-Indique en el siguiente listado cuáles identifica con eventos y cuáles son acciones de un DTE.
+Teniendo en cuenta que:
+ • un evento es una ocurrencia que puede causar la transición de un estado a otro.
+ • una acción es una operación atómica, que no se puede interrumpir por un evento y que se ejecuta hasta su finalización
+
+recepción de una llamada para realizar una operación: Evento
+Crear un archivo Elegir: Acción 
+paso de cierto período de tiempo, después de entrar al estado actual, o de cierta hora y fecha concretas: Evento
+Modificar la hora: Acción 
+Liberar habitación: Acción
+recepción de una señal: Evento 
+
+8-Según lo visto en teoría identifique para el siguiente problema cuales son estados y cuales transiciones (evento, condición o acción).
+
+ La fotocopiadora estará apagada durante los fines de semana. Los lunes se enciende y se queda en modo hibernación hasta que llega un usuario a fotocopiar. El usuario debe introducir el dinero y cuando lo considere oportuno pulsa el número de copias que desea hacer, o simplemente pulsa fotocopiar si por defecto quiere hacer una sola copia. Si no hubiera dinero suficiente para hacer las copias requeridas se lo indicará al usuario.
+
+Cuando ha terminado de hacer las copias muestra el saldo disponible. Si el usuario ha terminado de fotocopiar debe poder recuperar el dinero que quede en la fotocopiadora.
+
+Los sábados a las 10 de la mañana la fotocopiadora se apaga y vuelve a encenderse los lunes de las 7 de la mañana.
+
+Operación completada: Estados
+Devolviendo dinero: Acción
+Dinero no suficiente: Evento
+Pulsa copiar: Evento
+Calentando: Estado
+Dinero suficiente: Condición
+Devolver dinero: Acción
+Pidiendo número de copias: Estado
+Esperando dinero: Estado
+Encender fotocopiadora: Acción
+Aceptando dinero: Acción
+Fotocopiadora lista: Estado
+
+
+9-Un autómata finito (AF) puede ser descrito como una 5-tupla (S,Σ,T,s,A) Seleccione la definición correcta para cada componente de la 5-tupla:
+ A es: cojunto de estados de aceptacion o finales
+T es: la funcion de transicion
+Σ es: un alfabeto 
+s (minúscula) es: estado incial
+S (mayúscula) es: conjunto de estados
+
+
+
+
