@@ -1,0 +1,116 @@
+Ejercicio 2:
+HU-1
+id: Cargar carreras
+Titulo: Como empleado administrativo quiero cargar las carreras de posgrado para que los alumnos puedan elegirlas
+Reglas de negocio:
+	-Los nombres de las carreras no pueden repetirse
+	-No pueden durar mas de 5 años 
+Reverso
+Criterios de aceptación 
+Escenario 1: Carga de carrera exitosa
+	Dado que la carrera Maestría en Redes de Datos no se repite y la carrera no dura más 	de 5 años
+	cuando el administrativo ingresa nombre de la carrera: Maestría en Redes de Datos, 	duración en años: 5, costo 200 y cantidad máxima de cuotas: 18 y presiona “Cargar"
+	entonces el sistema da una respuesta exitosa y se carga la carrera
+Escenario 2: Carga de carrera fallida por nombre repetido
+	Dado que la carrera Maestría en Ingeniería de Software ya está cargada y la carrera no 	dura más de 5 años
+	cuando el administrativo ingresa nombre de la carrera: Maestría en Ingeniería de 	Software, duración en años: 5, costo 250 y cantidad máxima de cuotas: 12 y presiona 	"Cargar"
+	entonces el sistema no carga la carrera y da una respuesta de error informando que ya 	hay una carrera con el mismo nombre
+Escenario 3: Carga de carrera fallida por duración mayor a 5 años
+	Dado que la carrera Especialización en Redes y seguridad no está cargada en el 	sistema y la duración es de 7 años
+	cuando el administrativo ingresa nombre de la carrera:  Especialización en Redes y 	seguridad, duración en años: 7, costo 450 y cantidad máxima de cuotas: 6 y presiona 	"Cargar"
+	entonces el sistema no carga la carrera y da una respuesta de error informando que la 	carrera no puede durar más de 5 años.
+
+
+
+HU-2
+id: Registro de alumno
+Título: Como alumno quiero registrarme al sistema para poder acceder a las carreras de posgrados que hay
+Reglas de negocio:
+	-Nombre de usuario único
+	-Contraseña de más de 6 dígitos
+reverso
+Criterios de aceptación
+Escenario 1: Registro exitoso
+	Dado el ingreso del nombre de usuario "Juan12" con la contraseña "123456"
+	cuando se ingresa los datos nombre: Juan, apellido: Gonzales,
+	nombre de usuario: Juan12 y contraseña: 123456 y presiona "Registrarse"
+	entonces se registra exitosamente el alumno en el sistema
+Escenario 2: Registro fallido por nombre de usuario ya existente
+	Dado el ingreso del nombre de usuario "Pepe22" y la contraseña "654321"
+	cuando se ingresa los datos nombre: Pepe, apellido: López,
+	nombre de usuario: Pepe22 y contraseña: 654321 y presiona "Registrarse"
+	entonces no se puede concretar el registro del alumno y el sistema informa que el 	nombre de usuario ya es existente
+Escenario 3: Registro fallido por contraseña menor a 6 dígitos
+	Dado el ingreso del nombre de usuario "MatiasG12" y la contraseña "123"
+	cuando se ingresa los datos nombre: Matías, apellido: García,
+	nombre de usuario: MatiasG12 y contraseña: 123 y presiona "Registrarse"
+	entonces no se puede concretar el registro del alumno y el sistema informa que la 	contraseña tiene que tener un mínimo de 6 dígitos 
+
+HU-3
+id: Inicio de Sesión
+Título: Como estudiante quiero iniciar sesión para poder inscribirme a una carrera de posgrado
+Reglas de negocio:
+	-El alumno debe estar registrado previamente
+Reverso
+Criterios de aceptación
+Escenario 1: Inicio de sesión exitoso
+	Dado un alumno ya registrado en el sistema
+	cuando ingresa sus datos y presiona "Iniciar Sesión"
+	entonces se inicia sesión correctamente
+Escenario 2: Inicio sesión fallido por falta de registración 
+	Dado que un alumno ingresa datos que no se registraron previamente
+	cuando ingresa los datos y presiona "Iniciar Sesión"
+	entonces el inicio se sesión falla y el sistema informa que no hay ningún alumno 	registrado con esos datos
+
+HU-4 
+Id: Cierre de Sesión
+Título: Como estudiante quiero cerrar sesión para poder irme a comer
+Reglas de negocio:
+Reverso
+Criterios de aceptación: 
+Escenario 1: Cierre de sesión exitoso
+	Dado un alumno con una sesión abierta
+	Cuando aprieta “Cerrar Sesión”
+	Entonces el sistema cierra sesión exitosamente
+
+HU-5
+id: Inscripción a posgrado
+Título: Como estudiante me quiero inscribir a un posgrado para poder ser un mejor profesional
+Reglas de negocio:
+Reverso
+Criterios de aceptación
+Escenario 1:  Inscripción exitosa
+	Dado un inicio de sesión y condiciones para un pago exitoso
+	cuando se seleccionó la carrera de Maestría en Ingeniería de Software, se ingresó 	en 12 cuotas y presiona "Matricularse"
+	entonces se redirige al estudiante al sistema de pago y se espera una respuesta, 	matricula al estudiante e imprime comprobante de pago y de inscripción
+Escenario 2: Fallo de inscripción por error en el pago
+	Dado un inicio de sesión y condiciones para un pago exitoso
+	cuando se seleccionó la carrera de Maestría en Ingeniería de Software, se ingresó 	en 3 cuotas y presiona "Matricularse"
+	entonces el sistema redirige al estudiante al sistema de pago, espera respuesta y no 	se puede concretar la inscripción, el sistema informa que hubo un error en el pago
+
+HU-6
+id: Pago con tarjeta
+Título: Como estudiante quiero pagar mi posgrado con tarjeta de crédito para que se me divida en meses los pagos
+Reglas de negocio:
+	La tarjeta debe ser de crédito
+Reverso
+Criterios de aceptación 
+Escenario 1: Pago exitoso
+Dado que la conexión con el servidor del banco es óptima y el ingreso de una tarjeta con numero “1234” corresponde a una tarjeta de crédito con saldo suficiente 
+	Cuando se ingresa el numero de tarjeta: 1234 y se presionar “Pagar”
+	Entonces el sistema registra el pago y se hace efectiva la inscripción.
+	
+Escenario 2: Pago fallido por tarjeta inexistente  
+Dado que la conexión con el servidor del banco es exitosa y el ingreso de la tarjeta numero ”4321”
+Cuando el cliente ingresa el numero de tarjeta “4321” y presiona “Pagar”
+Entonces el sistema no puede efectivizar el pago e informa que el número de tarjeta ingresad n es un valido
+
+Escenario 3: Pago fallido por saldo insuficiente
+Dado que la conexión con el servidor del banco es óptima y el ingreso de la tarjeta número “5555”
+Cuando el cliente ingresa el numero de tarjeta “5555” y presiona “Pagar”
+Entonces el sistema no puede efectivizar el pago e informa que la tarjeta no tiene saldo suficiente
+
+Escenario 4: Pago fallido por error con el servidor
+	Dado que la conexión al servidor del banco no fue exitosa
+	Cuando el cliente ingresa un numero de tarjeta y presiona “Pagar”
+Entonces el sistema no fue efectivizar el pago e informa que no se pudo conectar con el servidor del banco
