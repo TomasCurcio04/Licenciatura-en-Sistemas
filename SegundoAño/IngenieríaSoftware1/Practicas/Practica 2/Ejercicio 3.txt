@@ -1,0 +1,86 @@
+HU-1
+id: Creación de minutas
+Título: Como empleado de mesa de entradas quiero crear las minutas para poder que mi compañero las apruebe 
+Reglas de negocio:
+	-El monto del contrato no puede superar los 25000
+	-La duración del contrato no puede superar los 6 meses
+Reverso
+Criterios de aceptación:
+Escenario 1: Creación de minuta exitosa
+	Dado que el empleado de mesa de entradas ingreso el monto de contrato 			"1500" y duración "2 meses"
+	Cuando el empleado de mesa de entradas ingresa nombre: Pedro, 
+	número de CUIT 20-25-2, tipo de contrato: Prueba, fecha de comienzo: 			10/11/2023, duración: 3 meses, monto 1500 y presiona "Crear"
+entonces el sistema crea la minuta exitosamente y le asocia un numero de minuta automáticamente
+Escenario 2: Creación de minuta fallida por duración mayor a 6 meses
+	Dado que el empleado de mesa de entradas ingreso el monto de "2000" y 		duración de 12 meses
+	Cuando el empleado de mesa de entradas ingresa nombre: Leandro, 
+	número de CUIT 20-202-2, tipo de contrato: Prueba, fecha de comienzo: 		19/12/2023, duración: 12 meses, monto 2000 y presiona "Crear"
+	entonces el sistema no puede crear la minuta e informa que el tiempo del 	contrato no puede ser mayor a 6 meses
+Escenario 3: Creación de minuta fallida por monto mayor a 25000
+	Dado que el empleado de mesa de entradas ingreso el monto de "30000" y 			duración de 4 meses
+	Cuando el empleado de mesa de entradas ingresa nombre: Leonel, 
+	número de CUIT 20-2012-2, tipo de contrato: Prueba, fecha de comienzo: 	11/10/2023, duración: 4 meses, monto 30000 y presiona "Crear"
+	entonces el sistema no puede crear la minuta e informa que el monto del 		contrato no puede ser mayor a 25000
+
+HU-2
+id: Aprobación de minutas
+Título: Como empleado de rendiciones quiero aprobar las minutas para poder pasar a cerrar los contratos 
+Reglas de negocio:
+	-La persona a contratar tiene menos de 3 contratos vigentes (minutas 		aprobadas) 
+	-El CUIT de la persona a contratar tiene que estar habilitado por la 			AFIP.
+Reverso
+Criterios de aceptación 
+Escenario 1: Aprobación de minuta exitosa
+	Dado que el empleado de rendiciones ingresa el número de minuta "3"
+	cuando se ingresa el número de minuta: 3 y presiona "Aprobar"
+	entonces el sistema muestra los datos del cliente y se aprueba la minuta 	exitosamente
+
+Escenario 2: Aprobación de minuta fallida por contratos vigentes mayor a 3
+	Dado que el empleado de rendiciones ingresa el número de minuta "2"
+	Cuando se ingresa el número de minuta: 2 y presiona "Aprobar"
+	entonces el sistema muestra los datos del cliente e informa que no es posible aprobar la minuta por contratos vigentes mayor a 3.
+Escenario 3: Aprobación de minuta fallida por no habilitado por la AFIP
+	Dado que el empleado de rendiciones ingresa el número de minuta "1"
+	cuando se ingresa el número de minuta: 2 y presiona "Aprobar"
+	entonces el sistema muestra los datos del cliente e informa que no es posible aprobar la minuta por falta de habilitación de la AFIP
+
+
+
+
+
+
+HU-3
+Id: verificación de habilitación de la persona contratada ante la AFIP
+Titulo: Como empleado de rendiciones quiero que el sistema me diga si un empleado este habilitado por la AFIP para poder aprobar la minuta
+Reglas de negocio: 
+Reverso
+Criterios de aceptación:
+Escenario 1: Verificación de habilitación por AFIP exitosa
+	Dado que el sistema se conectó correctamente con el servidor de la AFIP 
+	Cuando el sistema manda al servidor de la AFIP el token “2” y CUIT “1234”
+Entonces el sistema retorna un resultado exitoso, informando si la persona esta habilitada por la AFIP
+
+HU-4
+id: Impresión de minutas aprobadas
+Título: Como empleado de rendiciones quiero imprimir las minutas aprobadas para poder pasárselo al jefe de departamento
+Reglas de negocio:
+Reverso
+Escenario 1: Impresión exitosa
+	Dado que las condiciones son las optimas
+	cuando el empleado de rendiciones presiona "Imprimir"
+	entonces el sistema imprime todas las minutas aprobadas
+
+HU-5
+Id: Firma del listado del personal contratado
+Título: Como jefe de Departamento quiero firmar el listado del personal contratado para poder elevarlo a las autoridades
+Reglas de negocio: 
+	-Tener el listado de personal contratado
+Reverso
+Criterios de aceptación:
+Escenario 1: Firma exitosa
+	Dado que se entregó correctamente el listado del personal contratado
+	Cuando el jefe firma el listado y entrega el listado 
+	Entonces las autoridades lo reciben
+
+
+
