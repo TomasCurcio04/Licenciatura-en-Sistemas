@@ -1,0 +1,129 @@
+Ejercicio 1:
+HU-1
+
+Id: Cargar muebles
+
+Título: Como gerente quiero dar de alta los diferentes mobiliarios para que los clientes puedan alquilarlos.
+
+Reglas de negocio: 
+	-No puede haber dos muebles con el mismo código.
+	-El encargado debe estar autenticado en el sistema.
+
+Reverso:
+
+Criterios de aceptación:
+
+Escenario 1: Alta exitosa.
+	Dado que el mueble 1 no se encuentra registrado y el encargado esta autenticado.
+	Cuando el encargado ingresa código de inventario: 1, tipo de mueble: mesa, fecha de creación: 10/10/2010, fecha de último mantenimiento: 10/6/2024, estado: libre y precio de 	alquiler $ 25. Y presiona “Cargar mueble”.
+	Entonces se da de alta el mobiliario y retorna un resultado exitoso.
+
+Escenario 2: Alta fallida por código de mueble repetido.
+	Dado que el mueble 2 ya se encuentra registrado en el sistema y el encargado ya se encuentra autenticado.
+	Cuando el encargado ingresa código de inventario: 2, tipo de mueble: mesa, fecha de creación: 10/10/2010, fecha de último mantenimiento: 10/6/2024, estado: libre y precio de 	alquiler $ 25. Y presiona “Cargar Mueble”.
+	Entonces no se carga el mobiliario y retorna un resultado de error informando que ese código de mobiliario ya existe en el sistema.
+
+
+HU-2
+
+Id: Reservar muebles.
+
+Título: Como cliente quiero alquilar un mueble para mi evento.
+
+Reglas de negocio:
+
+	-Como mínimo el alquiler tiene que incluir 3 muebles.
+	-Se debe abonar el 20% del total del alquiler.
+
+Reverso:
+
+Criterios de aceptación:
+
+Escenario 1: Alquiler exitoso.
+	Dado que el alquiler del cliente tiene un mínimo de 3 muebles y se abono el 20% del total.
+	Cuando el cliente presiona “alquilar”.
+	Entonces redirige al usuario para que pague con tarjeta de crédito el total del alquiler, espera respuesta y se concreta el alquiler.
+
+Escenario 2: Alquiler fallido por cantidad de muebles
+	Dado que el cliente no llego a la cantidad mínima de muebles para el alquiler.
+	Cuando el cliente ingresa la fecha 20/11/2024, lugar del evento: Buenos Aires, cantidad de días: 1, mobiliario: sillas y cantidad 2 y presiona “Alquilar”.
+	Entonces el sistema informa que no se puedo concretar el alquiler debido a que no alquilo un mínimo de muebles de 3.
+
+Escenario 3: Alquiler fallido por pago del 20% no concretado
+	Dado que no se realizó el abono del 20% del pago total.
+	Cuando el cliente ingresa la fecha 20/11/2024, lugar del evento: Buenos Aires, cantidad de días: 1, mobiliario: sillas y cantidad 10 y presiona “Alquilar”.
+	Entonces el sistema informa que no se pudo concretar el alquiler por falta de pago del 20% del alquiler.
+
+
+HU-3
+
+Id: Pago con tarjeta.
+
+Titulo: Como cliente quiero pagar el alquiler con tarjeta para poder alquilar los muebles.
+
+Reglas de negocio: 
+	-La tarjeta solo puede ser de crédito.
+
+Reverso:
+
+Criterios de aceptación:
+
+Escenario 1: Pago exitoso
+	Dado que la conexión con el servidor del banco es exitosa, la tarjeta con número 1234 corresponde a una de crédito y tiene fondos suficientes.
+	Cuando el cliente ingresa el número de tarjeta 1234 presiona “Pagar”.
+	Entonces el sistema registra el pago, se emite un numero de reserva único y retorna un resultado exitoso.
+
+Escenario 2: Pago fallido por tarjeta con saldo insuficiente.
+	Dado que la conexión con el servidor del banco es exitosa, el número de tarjeta 1234 corresponde a una tarjeta de crédito, pero la tarjeta tiene saldo insuficiente.
+	Cuando el cliente ingresa el número de tarjeta 1234 y presiona “Pagar”.
+	Entonces el sistema retorna un error e informa que la tarjeta no tiene saldo suficiente.
+
+Escenario 3: Pago fallido por tarjeta de crédito inexistente.
+	Dado que la conexión con el servidor es exitosa, la tarjeta de crédito con numero 3333 es inexistente.
+	Cuando el cliente ingresa el número de tarjeta 3333 y presiona “Pagar”.
+	Entonces el sistema retorna error e informa que la tarjeta de crédito es inexistente.
+
+Escenario 4: Pago fallido por fallo en la conexión del servidor del banco.
+	Dado que la conexión al servidor del banco es fallida
+	Cuando el cliente ingresa un numero de tarjeta de crédito y presiona “Pagar”.
+	Entonces el sistema retorna error e informa pago fallido por fallo en la conexión al servidor
+
+HU-4
+
+Id: Iniciar sesión
+
+Título: Como encargado quiero autenticarme para poder dar de alta los mobiliarios. 
+
+Reglas de negocio:
+	-Estar registrado
+	
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Inicio de sesión exitosa
+	Dado un usuario ya registrado en el sistema
+	Cuando este ingresa sus datos y presiona “Iniciar Sesión”
+	Entonces se inicia sesión exitosamente
+
+Escenario 2: Inicio de sesión fallido por usuario no registrado
+	Dado un usuario no registrado en el sistema
+	Cuando este ingresa sus datos y presiona “Iniciar Sesión”
+	Entonces el sistema avisa que no se pudo iniciar sesión porque no hay ningún usuario registrado con esos datos
+
+HU-5
+
+Id: Cierre de sesión
+
+Titulo: Como encargado quiero cerrar sesión para irme a mi casa
+
+Reglas de negocio:
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Cierre de sesión exitoso
+	Dado un encargado con inicio de sesión hecha
+	Cuando presiona “Cerrar Sesión”
+	Entonces se cierra sesión exitosamente
