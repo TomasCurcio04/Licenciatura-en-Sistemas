@@ -193,8 +193,6 @@ b. muestra los archivos llamados pepe, siempre y cuando tenga permisos de acceso
 
 c. envía la salida del comando al /dev/null
 
-¿Qué hace el comando test -w /home/pepe/?
-
 Respuesta: c
 
 11-¿Que hace el comando test -w /home/pepe/ ?
