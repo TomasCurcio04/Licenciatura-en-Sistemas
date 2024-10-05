@@ -1,0 +1,145 @@
+Ejercicio 5: 
+
+HU-1
+
+id: Registro de usuario
+
+Título: Como usuario quiero registrarme para poder subir mis fotos
+
+Reglas de negocios:
+
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Registro exitoso
+	Dado el nombre de usuario "Robert" 
+	cuando el usuario ingresa nombre: Robert, apellido: Zapata, email: Robertgmail.com, domicilio 4 y 55, nombre de usuario: RoZapata y contraseña 123 y presiona "Registrarse"
+	entonces el sistema da un resultado exitoso y registra al cliente
+
+
+HU-2 
+
+id: subir fotos 
+
+Título: Como cliente quiero subir mis fotos para poder imprimirlas
+
+Reglas de negocio: 
+
+	-Se pueden subir máximo de 50 fotos para ser impresas
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Fotos subidas exitosamente
+	Dado un usuario con una sesión iniciada
+	Cuando carga las fotos y presiona "Subir"
+	entonces el sistema sube exitosamente las fotos
+
+Escenario 2: Fotos subidas fallida
+	Dado un cliente con una sesión activa
+	Cuando el cliente carga las fotos y presiona "Subir"
+	entonces el sistema no puede cargar las fotos e informa que el límite 	de fotos a subir son 50
+
+
+
+HU-3
+
+id: Pago con tarjeta
+
+Título: Como cliente quiero abonar mis fotos para poder buscarlas después en el local cuando estén impresas
+
+
+Reglas de negocio:
+	
+	-El pago se realiza con tarjeta de crédito
+
+Criterios de aceptación
+
+Escenario 1: Pago exitoso
+	Dado una conexión exitosa con el servidor del banco y el número de tarjeta "1234"
+	cuando el cliente ingresa el código de tarjeta: 1234, cód. de seguridad:555 y nombre del titular: Páez Pedro y presiona "Pagar"
+	entonces el sistema da un resultado exitoso y otorga al cliente un código único para retirar las fotos
+	
+	
+Escenario 2: Pago fallido por tarjeta inexistente
+	Dado el ingreso de numero de tarjeta "1515" y una conexión con el servidor del banco exitosa
+	Cuando el cliente ingresa el código de tarjeta: 1515, cód. de seguridad:177 y nombre del titular: Tevez Valentín y presiona "Pagar"
+	entonces el sistema no puede efectivizar el pago y retorna que el número de tarjeta es inexistente
+
+Escenario 3: Pago fallido por fondos insuficientes
+	Dado una conexión con el servidor del banco exitosa y el número de tarjeta "7777"
+	cuando el cliente ingresa el código de tarjeta: 777, cód. de seguridad:722 y nombre del titular: Gonzales Rosa y presiona "Pagar"
+	entonces el sistema no puede efectivizar el pago y retorna que la tarjeta no tiene fondos suficientes
+
+Escenario 4: Pago fallido por error en la conexión con el servidor
+	Dado el número de tarjeta "8888" y una conexión fallida con el servidor del banco
+	Cuando el cliente ingresa el código de tarjeta: 8888, cód. de seguridad:887 y nombre del titular: Fort Ricardo y presiona "Pagar"
+	entonces el sistema no puede efectivizar el pago y retorna que hubo un error con la conexión con el servidor del banco
+
+HU-4
+
+id: Retiro de fotos
+
+Título: Como cliente quiero retirar mis fotos para poder tenerlas en mi casa
+
+Reglas de negocio:
+	-Tener el código uno de retiro
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Retiro exitoso
+	Dado el código de retiro n "1"
+	cuando el cliente le da al empleado el código 1
+	entonces el empleado registra le código e ingresa la fecha del retiro, otorgándole al cliente sus fotos correspondientes
+
+
+HU-5
+
+id: Inicio de sesión 
+
+Título: Como cliente quiero iniciar sesión para poder cargar mis fotos
+
+Reglas de negocio:
+	-Estar previamente registrado
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Inicio de sesión exitoso
+	Dado un usuario previamente registrado
+	cuando este ingresa sus credenciales correspondientes y presiona "Iniciar Sesión"
+	entonces el sistema retorna un resultado exitoso y se inicia sesión 
+
+Escenario 2: Inicio de sesión fallido por credenciales erróneas
+	Dado un usuario previamente registrado
+	cuando este ingresa sus credenciales erróneas y presiona "Iniciar Sesión"
+	entonces el sistema no puede concretar el inicio de sesión y retorna que las credenciales no son las correctas
+
+Escenario 3: Inicio de sesión fallido por usuario no registrado
+	Dado un usuario no registrado
+	cuando ingresa sus datos y presiona "Iniciar Sesión"
+	entonces el sistema retorna que no hay ningún usuario registrado con esas credenciales
+
+
+HU-6 
+
+id: Cierre de sesión 
+
+Título: Como usuario quiero cerrar sesión para poder ir a buscar mis fotos
+
+Reglas de negocio: 
+
+Reverso
+
+Criterios de Aceptación:
+
+Escenario 1: Cierre de sesión exitoso
+	Dado una sesión abierta
+	cuando el cliente ingresa "Cerrar Sesión"
+	entonces el sistema cierra sesión exitosamente
