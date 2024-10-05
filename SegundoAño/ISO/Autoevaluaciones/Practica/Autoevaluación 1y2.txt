@@ -1,0 +1,376 @@
+1-Cuál de las siguientes características es correcta acerca de GNU/Linux?
+
+a.
+En el año 1992, Torvalds y Stallman, deciden fusionar los proyectos Linux y GNU con el fin de crear GNU/Linux
+
+b.
+Así como desde Windows no se pueden leer los filesystems de GNU/Linux, desde GNU/Linux tampoco es posible leer los filesystems de Windows.
+
+c.
+En GNU/Linux no existe el concepto de dispositivo
+
+d.
+GNU/Linux no soporta la multitarea
+
+Respuesta: a
+
+
+2-¿Cuál de las siguientes opciones es correcta acerca de las Distribuciones GNU/Linux?
+
+a.
+Todas comparten el formato de paquete ".deb" por estar basadas inicialmente en Debian GNU/Linux.
+
+b.
+Unas pocas distribuciones permiten instalar interfaz gráfica, la mayoría se usa desde la consola de comandos.
+
+c.
+Existen distribuciones que incluyen paquetes propietarios y otras que son 100% libres
+
+d.
+Todas tienen las mismas versiones del kernel, cambian sólo en sus aplicaciones.
+
+Respuesta: c
+
+
+3-¿Cual de las siguientes opciones es correcta acerca de las Distribuciones GNU/Linux?
+
+a.
+RedHat es una distribución basada en Debian para entornos corporativos.
+
+b.
+Al poco tiempo de la aparición de GNU/Linux, Linus Torvalds creó la distribución Slackware.
+
+c.
+Ubuntu es la primer distribución GNU/Linux en incluir interfaz gráfica.
+
+d.
+Una de las principales diferencias entre algunas distribuciones es el formato de sus paquetes instalables
+
+Respuesta: d
+
+
+4-¿Cuál es el orden correcto de la secuencia de booteo del sistema operativo?
+
+a.
+1. Se ejecuta el código de la BIOS – 2. Se carga el gestor de arranque – 3. El hardware lee el sector de arranque – 4. Se carga el kernel
+
+b.
+1. El hardware lee el sector de arranque – 2. Se ejecuta el código de la BIOS – 3. Se carga el kernel – 4. Se carga el gestor de arranque
+
+c.
+1. Se ejecuta el código de la BIOS – 2. El hardware lee el sector de arranque – 3. Se carga el gestor de arranque – 4 Se carga el kernel
+
+d.
+1. El hardware lee el sector de arranque – 2. Se ejecuta el código de la BIOS – 3. Se carga el gestor de arranque – 4. Se carga el kernel
+
+Respuesta: c
+
+
+5-¿Cuál es la version estable actual del kernel Linux?
+
+a.
+2.6.X
+
+b.
+6.10.7
+
+c.
+2.4.X
+
+d.
+4.2.X
+
+Respuesta: b
+
+
+6-¿Cuál(es) de las siguientes afirmaciones es(son) verdadera(s) respecto al intérprete de comandos (shell) en GNU/Linux?
+
+a.
+Están integrados en el sistema en forma de módulos del kernel.
+
+b.
+Se puede elegir un shell distinto por cada usuario del sistema, debiendo recompilarse el kernel para aplicar el cambio.
+
+c.
+Son archivos binarios ejecutables como cualquier otro programa.
+
+d.
+command.com es un ejemplo.
+
+Respuesta: c
+
+
+7-¿Cuál(es) de las siguientes opciones es correcta acerca de las Distribuciones GNU/Linux?
+
+a.
+Existen múltiples distribuciones GNU/Linux para servidores, pero solo una para máquinas de escritorio.
+
+b.
+Las distribuciones GNU/Linux se diferencian únicamente en el entorno gráfico que instalan.
+
+c.
+Las distribuciones GNU/Linux se diferencian en las aplicaciones que instalan y la versión del kernel que traen entre otras cosas
+
+d.
+Existen múltiples distribuciones GNU/Linux para distintos propósitos (servidores, máquinas de escritorio, tablets...)
+
+Respuesta: c y d
+
+
+8-¿Cual(es) de las siguientes opciones es correcta acerca de los niveles de ejecución en GNU/Linux según el estándar?
+
+a.
+El runlevel 6 no se utiliza
+
+b.
+El runlevel 0 hace referencia a un modo monousuario
+
+c.
+El runlevel 1 hace referencia a un modo shutdown
+
+d.
+Los runlevels 2 al 5 hacen referencia a modos multiusuario
+
+e.
+El runlevel 6 hace referencia a un modo reboot
+
+Respuesta: d y e
+
+
+9-¿Cuál(es) de los siguientes elementos NO forma( n ) parte del FHS?
+
+a.
+/usr/bin/
+
+b.
+/sbin/
+
+c.
+/bin/
+
+d.
+/users/bin/
+
+Respuesta: d
+
+
+10- ¿Donde se encuentra ubicada dentro del filesystem la imagen del kernel Linux según el FHS?
+
+a.
+/system
+
+b.
+/root
+
+c.
+/boot
+
+d.
+/kernel
+
+Respuesta: c
+
+
+11-¿Qué es POSIX?
+
+a.
+Un comando utilizado para determinar la versión de POSIX de un Sistema Operativo.
+
+
+b.
+Un Sistema Operativo derivado de Unix.
+
+
+c.
+Un conjunto de librerías estándar que utilizan los Sistemas Operativos que utilizan POSIX.
+
+
+d.
+Un conjunto de estándares definiendo APIs para los Sistemas Operativos que lo cumplen.
+
+Respuesta: d
+ 
+ 
+12-¿Que tipo de kernel es Linux?
+
+a.
+Microkernel
+
+b.
+Monolítico Híbrido
+
+c.
+Hibrido
+
+d.
+Monolítico
+
+Respuesta: b
+
+
+13-Acerca del MBR, ¿Cuál de las siguientes afirmaciones es correcta?
+
+a.
+Existe un MBR por partición
+
+b.
+Existe un MBR por disco
+
+c.
+Existe un MBR por sistema operativo
+
+d.
+Existe un MBR por computadora
+
+Respuesta: b
+
+
+14-Una distribución GNU/Linux se diferencia de otra en:
+
+a.
+Las diferencias son solo estéticas. Es decir, sólo cambia el fondo de
+ pantalla que viene por defecto, la combinación de colores que utiliza para
+ los bordes de ventana, etc.
+
+
+b.
+el conjunto de aplicaciones que se pueden utilizar, es decir, una
+ aplicación hecha para Debian, por ejemplo,  no se puede utilizar en
+ Fedora.
+
+
+c.
+el conjunto de aplicaciones que se instalan por defecto, el gestor de
+ programas/paquetes que utilizan, la versión del kernel a la que da
+ soporte.
+
+
+d.
+el esquema de particionamiento, es decir, cada distribución GNU/Linux
+ viene con un esquema de particionamiento por defecto que no es posible
+ cambiar.
+
+Respuesta: c
+
+
+15-En una máquina con arranque UEFI
+
+a.
+El gestor de arranque, ej. Grub, debe ser una aplicación UEFI instalada en el UEFI File System
+
+b.
+El MBR no existe mas, el gestor de arranque si o si tiene que ser una aplicación UEFI firmada digitalmente
+
+c.
+Utiliza GPT como formato para su tabla de particiones
+
+d.
+Se puede bootear con el MBR legado.
+
+Respuesta: a, c y d
+
+
+16-En una tabla de particiones puede haber definido como máximo:
+
+a.
+particiones primarias.
+
+b.
+particiones primarias y una secundaria.
+
+c.
+particiones primarias y una extendida.
+
+d.
+particiones lógicas y una extendida.
+
+Respuesta: c
+
+
+17-El FHS hace referencia a:
+
+a.
+Un estándar para particionar sistemas Unix.
+
+
+b.
+Todas las opciones son válidas
+
+
+c.
+Una estandarización de los comandos requeridos por los gestores de paquetes.
+
+
+d.
+Un estándar para organizar archivos y directorios archivos del file system.
+
+
+e.
+Ninguna opción es válida
+
+Respuesta: d
+
+
+18-La GPL es:
+
+a.
+el nombre de una librería para programar interfaces gráficas.
+
+
+b.
+Una licencia de derechos de autor
+
+
+c.
+un shell (intérprete de comandos).
+
+
+d.
+un módulo del kernel.
+
+
+e.
+Ninguna.
+
+Respuesta: b
+
+
+19- Indique cuales de las siguientes afirmaciones son verdaderas:
+
+a.
+Si el PPID de un proceso es igual a cero significa que dicho proceso no tiene Padre
+
+b.
+El comando killall mata al proceso y todos los hijos de ese proceso
+
+c.
+El PID del proceso Padre es menor que el del proceso Hijo
+
+d.
+Si sabemos el nombre de un proceso, podemos matarlo con el comando killall
+
+Respuesta: d
+
+
+20-Marque la/s opción/es correcta/s acerca de la funcionalidad de un kernel:
+
+a.
+Administra el uso de la CPU
+
+
+b.
+Permite que el monitor reciba energía eléctrica
+
+
+c.
+Ninguna de las anteriores
+
+
+d.
+Administra la memoria principal
+
+
+e.
+Todas las anteriores
+
+Respuesta: a y d
