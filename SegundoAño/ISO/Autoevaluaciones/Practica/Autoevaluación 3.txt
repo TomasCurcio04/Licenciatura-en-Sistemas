@@ -1,0 +1,484 @@
+Preguntas y Opciones:
+1-Asocie los siguientes operadores de bash con sus significados o comandos equivalentes.
+
+a-[ expresión ] -> test expresión.
+
+
+b-echo cadena | grep archivo -> Busca el string "archivo" dentro del string "cadena".
+
+c-echo $(( expresión )) -> expr expresión.
+
+d-echo cadena >> archivo -> Escribe "cadena" al final de "archivo".
+
+e-$(./archivo) -> ./archivo.
+
+f-echo cadena > archivo -> Sobreescribe "archivo" con el string "cadena".
+
+g- cadena=./archivo -> Guarda lo que imprime "archivo" al ejecutarse adentro de la variable "cadena".
+
+2-¿Con qué símbolo se declara un comentario?
+
+a. //
+b. %
+c. #
+d. ;
+e. ?
+
+Respuesta: c
+
+3-¿Cuáles de las siguientes sintaxis de funciones son correctas?
+
+
+a.
+mayor() {
+	if [ $1 > $2 ]; then 
+		echo $1; 
+	else
+		echo $2; 
+	fi
+}
+
+b.
+mayor(a,b) {
+	if [ $a > $b ]; then
+		echo $a;
+	else 
+		echo $b; 
+	fi
+}
+
+c.
+funtion mayor() {
+	if [ $1 > $2 ]; then
+		echo $1;
+	else 
+		echo $2;
+	fi
+}
+
+Respuesta: a
+
+4-¿Cuáles de las siguientes sintaxis del comando for son correctas?
+
+
+a.
+for i in $(seq 1 100); do echo "$i"; done
+
+b.
+for i in seq 1 100 do
+echo "$i"
+done
+
+c.
+for i in seq 1 100
+do
+echo "$i"
+done
+
+d.
+for $i in seq 1 100
+do
+echo "$i"
+done
+
+e.
+for i in seq 1 100; do echo "$i"; done
+
+Respuesta: a, c, e
+
+5-¿Cuáles de las siguientes sintaxis del comando if son correctas?
+
+a.
+if test -d /home/pepe then echo "es un directorio" fi
+
+b.
+if [ "$nombre" == "Maria" ]
+then
+echo "Es igual"
+fi
+
+c.
+if test -r /home/pepe; then echo "Tengo permisos de lectura"; fi
+
+d.
+if ["$nombre" == "Maria"]
+then echo "Es igual"
+fi
+
+Respuesta: b, c
+
+6-¿Cuáles de los siguientes usos de arreglos son correctos?
+
+a.
+agregar un nuevo elemento: arreglo+=5
+
+b.
+agregar un nuevo elemento: arreglo+=(5)
+
+c.
+arreglo = (3 4 5)
+
+d.
+echo ${#arreglo[*]}
+
+e.
+echo ${arreglo[1]}
+
+f.
+arreglo=(3 4 5)
+
+g.
+echo $arreglo[2]
+
+Respuesta: b, d, e, f
+
+7-¿Cuáles de los siguientes usos de expr son correctos?
+
+a.
+expr length "PEPE"
+
+b.
+expr 5 != 5
+
+c.
+expr 4 + 5
+
+d.
+expr - 6 5
+
+e.
+expr 4 5 *
+
+Respuesta a, b, c
+
+8-¿Cuáles de los siguientes usos de variables son correctos?
+
+a.
+echo $NOMBRE
+
+b.
+echo APELLIDO
+
+c.
+DIRECCION="56 nro 436"
+
+d.
+var NOMBRE="pepe"
+
+e.
+APELLIDO = "sanchez"
+
+f.
+echo ${DIRECCION}
+
+Respuesta: a, c y f
+
+9-¿Qué comillas se utilizan para hacer uso de la sustitución de comandos?
+
+a. ' '
+
+b. " "
+
+c. ^ ^
+
+d. ` `
+
+Respuesta: d
+
+10-¿Qué hace el comando "find / –name pepe 2> /dev/null"?
+
+a. crea un archivo vacío en /dev/null
+
+b. muestra los archivos llamados pepe, siempre y cuando tenga permisos de acceso a ellos
+
+c. envía la salida del comando al /dev/null
+
+¿Qué hace el comando test -w /home/pepe/?
+
+Respuesta: c
+
+11-¿Que hace el comando test -w /home/pepe/ ?
+
+a.
+Evalúa si el archivo o directorio existe y es un directorio
+
+b.
+Evalúa si el archivo o directorio existe y se tiene el permiso de escritura
+
+c.
+Evalúa si el archivo o directorio existe y se tiene el permiso de lectura
+
+d.
+Evalúa si el archivo o directorio existe y es un archivo regular
+
+e.
+Evalúa si el archivo o directorio existe
+
+Respuesta: b
+
+12-¿Qué información tiene la variable $#?
+
+a. La cantidad de arreglos utilizados en el script
+
+b. La cantidad de parámetros que se enviaron
+
+c. Ninguna, es solo un comentario
+
+d. La cantidad de variables utilizadas en el script
+
+Respuesta: b
+
+13-¿Qué resultado tiene el siguiente comando "cat /etc/passwd | cut -f1 -d: | grep "^a""?
+
+a. Imprime los nombres de usuario que contenga una letra a
+
+b. Imprime las password de los usuarios que contengan una letra a
+
+c. No imprime nada
+
+d. Imprime los nombres de los usuarios que empiecen con la letra a
+
+e. Imprime los homes de los usuarios que tienen una letra a
+
+Respuesta: d
+
+14-Dado el siguiente script, ¿Qué afirmaciones son verdaderas acerca de su ejecución?
+
+#!/bin/bash
+for i in {1..100}; do
+  while true; do
+    if ! (($i % 25)); then
+      echo "$i es divisible por 25"
+      continue 2
+    elif [ $i -eq 53 ]; then
+      break 2
+    elif [ "$i % $i" ]; then
+      break
+    fi
+  done
+done
+
+a. Cuando el valor de i llega al 53, el script termina.
+
+b. Es un bucle infinito
+
+c. Imprime que los valores 25 y 50 son divisibles por 25
+
+d. Imprime todos los valores del 1 al 100 divisibles por 25
+
+Respuesta: a y c
+
+15-¿Cuáles de las siguientes son funciones correctamente definidas?
+
+a.
+x() {
+echo $1 | grep $2
+}
+
+b.
+function x {
+echo $1 | grep $2
+}
+
+c.
+function x(1, 2); do
+echo $1 | grep $2
+done
+
+d.
+x(1, 2){
+echo $1 | grep $2
+}
+
+e.
+function x(1, 2){
+echo $1 | grep $2
+}
+
+Respuesta: a
+
+16-¿Cuáles de las siguientes equivalencias son ciertas?
+
+a.
+grep ac archivo
+
+equivale a:
+cat archivo | grep ac
+
+b.
+cat archivo | wc -c
+
+equivale a:
+wc -c archivo | cut -d' ' -f1
+
+c.
+echo hola | cat > salida
+
+equivale a:
+echo hola > salida
+
+d.
+find -name archivo
+
+equivale a:
+find . -name archivo
+
+e.
+find -name archivo
+
+equivale a:
+echo archivo | find -name
+
+f.
+echo hola | cat > salida
+
+equivale a:
+cat hola > salida
+
+Respuesta: a y c
+
+17- Qué opciones son verdaderas respecto a la secuencia de comandos:
+
+(test -f archivo && grep menta archivo && echo Z) || echo Q
+
+a.
+Siempre imprime "Q"
+
+
+b.
+Siempre imprime "Z"
+
+
+c.
+Sin los paréntesis el resultado sería el mismo
+
+
+d.
+Si "archivo" existe y contiene el string "menta" imprime "Z", sino imprime "Q"
+
+
+e.
+Si "archivo" existe y contiene el string "menta" imprime "Q", sino imprime "Z"
+
+
+f.
+Sin los paréntesis el resultado sería distinto
+
+Respuesta: d y f
+
+18-Supongamos que tenemos un archivo llamado "archivo" con el siguiente contenido:
+
+eth2 Link encap:Ethernet HWaddr 00:e0:7d:b4:1c:38
+inet addr:192.168.1.112 Bcast:255.255.255.255 Mask:255.255.255.0
+inet6 addr: fe80::2e0:7dff:feb4:1c38/64 Scope:Link
+UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+RX packets:115588267 errors:0 dropped:0 overruns:0 frame:0
+TX packets:35601221 errors:0 dropped:0 overruns:0 carrier:0
+collisions:0 txqueuelen:1000
+RX bytes:3240134640 (3.2 GB) TX bytes:2042178372 (2.0 GB)
+Interrupt:20 Base address:0xce00
+
+que resultado se obtiene al ejecutar:
+
+cat archivo | grep inet | cut -d: -f2 | cut -d" " -f1
+
+a.
+192.168.1.112
+
+b.
+255.255.255.255
+
+c.
+Ningun resultado
+
+d.
+00:e0:7d:b4:1c:38
+
+e.
+fe80::2e0:7dff:feb4:1c38/64
+
+Respuesta: a
+
+19-Se desea hacer un script que imprima la lista de argumentos que recibe. ¿Cuales de las siguientes implementaciones son correctas?.
+
+a.
+#!/bin/sh
+for arg in $@; do
+    echo $arg
+done
+
+
+b.
+#!/bin/sh
+for arg in ${argv[*]}; do
+    echo $arg
+done
+
+c.
+#!/bin/sh
+echo $*
+
+d.
+#!/bin/sh
+for arg in $*; do
+    echo $arg
+done
+
+e.
+#!/bin/sh
+echo $#
+
+
+f.
+#!/bin/sh
+for arg in argv; do
+    echo $arg
+done
+
+Respuesta: a, c y d
+
+20-Se desea hacer un script que imprima su primer argumento en pantalla, por ejemplo:
+
+$ ./mi_script.sh "Hola Mundo"
+
+debe imprimir "Hola Mundo" (sin las comillas).
+
+¿Cuál de las siguientes es una implementación que cumple este objetivo?
+
+a.
+#!/bin/sh
+echo argv[1]
+
+b.
+#!/bin/sh
+echo ${argv[1]}
+
+c.
+#!/bin/sh
+echo $1
+
+d.
+#!/bin/sh
+echo argv[0]
+
+e.
+#!/bin/sh
+echo ${argv[0]}
+
+
+f.
+#!/bin/sh
+echo $0
+
+g.
+#!/bin/sh
+echo $argv[1]
+
+h.
+#!/bin/sh
+for i; do
+echo $i
+break
+done
+
+Respuesta: c y h
