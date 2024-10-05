@@ -1,0 +1,113 @@
+Ejercicio 4:
+
+
+HU-1
+
+Id: Registro de personas
+
+Título: Como cliente quiero registrarme para poder comprar bebidas alcohólicas 
+
+Reglas de negocio:
+	-Nombre de usuario único(mail)
+	-Mayores de 18 años 
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Registro exitoso
+	Dado se ingresó el mail “Pepito@gmail.com” y edad”20”
+	Cuando el cliente ingresa nombre: Pepe, apellido: Gonzales, mail: Pepito@gmail.com y edad:20 y presiona “Registrarse”
+	Entonces el sistema da un resultad exitoso y se envía una contraseña al mail asociado
+
+Escenario 2: Registro fallido por mail repetido
+	Dado se ingresó mail “Toto123@gmail.com” y edad ”21” 
+	Cuando el cliente ingresa nombre: Toto, apellido: Pérez, mail: Toto123@gmail.com y edad:21 y presiona “Registrarse”
+	Entonces el sistema avisa que no se pudo completar el registro por email ya registrado
+
+Escenario 3: Registro fallido por edad menor a 18 años
+	Dado que se ingresó “Pablito@gmail.com” y edad “16”
+	Cuando el cliente ingresa nombre: Pablo, apellido: Rodríguez, mail:  Pablito@gmail.com y edad:16 y presiona “Registrarse”
+	Entonces el sistema avisa que no se pudo completar el registro debido a la Ley N 24.788 "Prohibida la venta de bebidas alcohólicas a menores de 18 años - Ley Nacional de Lucha 	contra el alcoholismo.
+
+
+HU-2
+
+Id: Inicio de Sesión
+
+Título: Como cliente quiero ingresar a mi cuenta para poder comprar bebidas para el fin de semana
+
+Reglas de negocio:
+	-Estar registrado previamente
+
+Reverso
+
+Criterios de aceptación 
+
+Escenario 1: Inicio de Sesión exitoso
+	Dado un usuario registrado en el sistema
+	Cuando ingresa sus credenciales y presiona “Iniciar Sesión”
+	Entonces el sistema da una respuesta exitosa y se inicia sesión correctamente 
+
+Escenario 2: Inicio de Sesión fallido por credenciales invalidas
+	Dado los datos ingresados del cliente 
+	Cuando el usuario ingresa credenciales invalidas y presiona “Iniciar Sesión”
+	Entonces el sistema informa que no se pudo iniciar sesión debido a credenciales invalidas
+
+
+
+HU-3
+
+Id: Cierre de sesión
+
+Título: Como cliente quiero cerrar sesión para poder irme a comer
+
+Reglas de negocio:
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Cierre de Sesión exitoso 
+	Dado que el cliente tiene una sesión abierta en el sistema
+	Cuando presiona "Cerrar Sesión"
+	Entonces el sistema cierra la sesión exitosamente
+
+
+Hu-4
+
+id: Compra
+
+Título: Como cliente quiero comprar bebidas para poder tomar con amigos
+
+Reglas de negocio:
+	-Si el cliente es socio se le hace un 20% de descuento
+	-Si el cliente supera el monto de 4500 en la compra se le hace un 10 % de descuento
+	-Si es socio y supera el monto de 4500 se le hace un descuento del 30%
+
+Reverso
+
+Criterio de aceptación:
+
+Escenario 1: Compra exitosa sin ser socio
+	Dado el cliente que no es socio y tiene una sesión abierta
+	Cuando selecciono productos por un monto de 3000
+	entonces el sistema no aplico ningún descuento, informando el monto a pagar de 3000
+
+Escenario 2: Compra exitosa siendo socio
+	Dado un cliente que es socio y tiene una sesión abierta
+	Cuando selecciono productos por un monto de 2000
+	entonces el sistema aplica el 20% de descuento, informando el monto a pagar de 1600
+
+Escenario 3: Compra exitosa superando los 4500 y sin ser socio
+	Dado un cliente que no es socio y tiene una sesión abierta
+	cuando selecciono productos por un monto de 5000
+	entonces el sistema aplica el 10% de descuento, informando el monto a pagar de 4500
+
+Escenario 4: Compra exitosa superando los 4500 y siendo socio
+	Dado un cliente que es socio y con una sesión abierta
+	Cuando selecciono productos por un monto de 6000
+	entonces el sistema aplica el 30% de descuento, informando el monto a pagar de 4200
+
+
+
