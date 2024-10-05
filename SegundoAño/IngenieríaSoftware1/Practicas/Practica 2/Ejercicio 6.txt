@@ -1,0 +1,108 @@
+Ejercicio 6: 
+
+HU-1
+
+id: Recibir donación 
+
+Título: Como empleada de la biblioteca quiero recibir donaciones para poder prestarlo a los alumnos
+
+Reglas de negocio:
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Donación recibida
+	Dado una donación de un libro
+	cuando la empleada ingresa "Registrar" 
+	entonces el sistema guarda la información del libro 
+
+
+HU-2
+
+id: Asociación
+
+Título: Como alumno quiero asociarme a la biblioteca para poder retirar libros de estudio
+
+Reglas de negocio:
+	-Presentar el DNI 
+	-Presentar certificado de alumno regular. 
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Asociación exitosa
+	Dado un alumno que presenta el DNI "123" y el certificado de alumno regular
+	cuando este ingresa DNI: 123 y certificado regular y presiona "Asociarse"
+	entonces el sistema da una respuesta exitosa asociando al alumno y otorgándole un numero de socio
+
+Escenario 2: Asociación fallida por falta de DNI
+	Dado un alumno que presenta el certificado de alumno regular y no el DNI
+	cuando este ingresa el certificado regular y no el DNI y presiona "Asociarse"
+	entonces el sistema retorna que no se pudo concretar el registro de socio por falta de DNI
+
+Escenario 3: Asociación fallida por falta de certificado de alumno regular
+	Dado un alumno que ingresa el DNI "4444" y no el certificado de alumno regular
+	cuando ingresa el DNI: 444 y no el certificado de alumno regular y presiona "Asociarse"
+	entonces el sistema retorna que no se puede concretar el registro de socio por falta de certificado de alumno regular
+
+
+
+HU-3
+id: Prestamos
+
+Título: Como socio quiero sacar un préstamo para poder estudiar
+
+Reglas de negocio:
+	-Ser socios habilitados
+	-No tener más de 3 préstamos vigentes 
+	-No tener prestamos vencidos
+
+Reverso
+
+Reglas de aceptación:
+
+Escenario 1: Préstamo exitoso
+	Dado un socio habilitado que no presenta más de 3 préstamos vigentes y no tiene prestamos vencidos
+	Cuando presiona "Sacar Préstamo"
+	entonces el sistema da una respuesta exitosa otorgando el préstamo al alumno
+
+Escenario 2: Préstamo fallido por socio inhabilitado
+	Dado un socio inhabilitado
+	cuando este presiona "Sacar Préstamo"
+	entonces el sistema retorna que no se pudo realizar el préstamo por socio inhabilitado
+
+Escenario 3: Préstamo fallido por exceso de préstamos vigentes
+	Dad un socio habilitado con más de 3 préstamos vigentes y sin prestamos vencidos
+	cuando este presiona "Sacar Préstamo" 
+	entonces el sistema retorna que no se puede realizar el préstamo por prestamos mayor a 3
+
+Escenario 4: Préstamo fallido por prestamos vencidos
+	Dado un socio habilitado con menos de 3 préstamos vigentes y con préstamos vencidos
+	cuando este presiona "Sacar Préstamo"
+	entonces el sistema retorna que no se puede realizar el préstamo porque el socio posee prestamos vencidos
+
+
+
+HU-4
+
+id: Retorno del libro
+
+Título: Como socio quiero devolver el libro para poder terminar mi préstamo
+
+Reglas de negocio:
+
+Reverso
+
+Criterios de aceptación:
+
+Escenario 1: Devolución de libro exitosa
+	Dado un préstamo sacado
+	cuando el socio presiona "Devolver Libro"
+	entonces el sistema da una respuesta exitosa registrando la devolución 
+
+Escenario 2: Devolución exitosa con vencimiento
+	Dado un préstamo sacado que ya se venció su plazo
+	cuando el socio presiona "Devolver Libro"
+	entonces el sistema da una respuesta exitosa registrando el libro e informando que el socio quedo suspendiendo 15 días por préstamo vencido
