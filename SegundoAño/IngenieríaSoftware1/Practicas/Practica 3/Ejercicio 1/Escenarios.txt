@@ -46,7 +46,7 @@ Postcondiciones: Cierre de sesión correctamente, las opciones para el encargado
 
 Escenario 3: 
 
-Nombre: Cargar mobiliarios
+Nombre: Cargar mobiliario
 
 Descripción: En este CU se describe como el encargado carga loos mobiliarios al sistema
 
@@ -70,7 +70,7 @@ Postcondiciones: El sistema da de alta el mobiliario
 
 Escenario 4: 
 
-Nombre: Alquilar mobiliarios
+Nombre: Reservar mobiliario
 
 Descripción: Este CU describe como un usuario alquila un mobiliario
 
@@ -102,7 +102,7 @@ Descripción: En este CU se describe como es el pago con tarjeta
 
 Actores: Usuario, Servidor externo (Banco)
 
-Precondiciones: Se debe haber ejecutado el CU Alquilar mobiliarios
+Precondiciones: Se debe haber ejecutado el CU Reservar mobiliario
 
 Curso normal: Acciones del actor: Paso 2: El usuario ingresa los datos solicitados
 				  Paso 4: El servidor externo acepta la conexión y pide numero de tarjeta y código de seguridad
