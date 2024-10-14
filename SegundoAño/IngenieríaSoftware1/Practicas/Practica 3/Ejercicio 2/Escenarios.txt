@@ -1,0 +1,150 @@
+Casos de uso: 
+
+Escenario 1:
+
+nombre: Registrarse
+
+Descripción: Este caso de uso describe como el alumno no se registrado se registra en la web
+
+actores: Alumno no registrado
+
+precondiciones: --
+
+curso normal: Acciones del actor: Paso 1-El Alumno no registrado presiona registrarse
+				  Paso 3-El Alumno no registrado ingresa los datos
+	
+	      Acciones del sistema: Paso 2- El sistema le pide al Alumno no registrado que ingrese nombre, apellido, nombre de usuario (único) y contraseña (m s de 6 dígitos)
+				    Paso 4- El sistema valida  que el usuario no se repite
+				    Paso 5- El sistema valida  que la contraseña tiene mas de 6 dígitos
+				    Paso 6- El sistema registra el usuario nuevo
+
+curso alternativo: Paso 4 alternativo: El sistema informa que el nombre de usuario ya existe. Vuelve al paso 2
+		   Paso 5 alternativo: El sistema informa que la contraseña no tiene mas de 6 dígitos. Vuelve al paso 2
+
+postcondiciones: Se registra el alumno 
+
+
+Escenario 2:
+
+Nombre: Iniciar sesión
+
+Descripción: Este CU describe como un Alumno registrado inicia sesión
+
+Actores: Alumno registrado
+
+Precondiciones: --
+
+Curso normal: Acciones del actor: Paso 1- El Alumno registrado presiona iniciar sesión
+	      			  Paso 3- El Alumno ingresa los datos pedidos
+
+
+	      Acciones del sistema: Paso 2- El sistema le pide al alumno registrado que ingrese nombre de usuario y contraseña
+				    Paso 4- El sistema valida los datos ingresados
+				    Paso 5- El sistema inicia sesión, habilitando las acciones para este
+
+Curso alterno: Paso alternativo 4: El usuario o contraseña no son validos, se informa la discrepancia. Vuelve al paso 2 
+
+Postcondiciones: Se inicia sesión habilitando las acciones para este
+
+
+
+Escenario 3: 
+
+Nombre: Cargar carreras
+
+Descripción: Este CU describe como el empleado administrativo carga las carreras de posgrado
+
+Actores: Empleado administrativo
+
+Precondiciones:--
+
+Curso normal: Acciones del actor: Paso 1-El empleado presiona cargar carrera
+				  Paso 3-El empleado ingresa los datos solicitados
+	
+	      Acciones del sistema: Paso 2-El sistema le pide al empleado administrativo nombre de la carrera (no puede repetirse), duración en a os (como máximo 5 	      				           a os), costo y cantidad maxima de cuotas para el pago.
+				    Paso 4-El sistema valida que el nombre no se repita
+				    Paso 5- El sistema valida que la duración de la carrera no sea mayor a 5
+				    Paso 6: El sistema carga la carrera de posgrado
+
+
+	
+
+Curso alternativo: Paso alternativo 4: El sistema informa que el nombre de la carrera ya es existente. Vuelve al paso 2
+		   Paso alternativo 5: El sistema informa que la duración de la carrera es mayor a 5. Vuelve al paso 2
+
+Postcondiciones: El sistema carga la carrera de posgrado
+
+
+Escenario 4:
+
+Nombre: Inscribirse a una carrera
+
+Descripción: Este CU describe como un alumno se inscribe a una carrera de posgrado
+
+Actores: Alumno registrado
+
+Precondiciones:
+
+Curso normal: Acciones del actor: Paso 1: El Alumno registrado presiona inscribirse a una carrera
+				  Paso 3: El Alumno ingresa los datos pedidos
+
+	      Acciones del sistema: Paso 2: El sistema le pide al Alumno registrado ingresar la carrera, cantidad de cuotas a pagar.
+				    Paso 4.1: El sistema verifica los datos ingresados
+				    Paso 4.2 El sistema redirige al Alumno registrado al CU pagar con tarjeta 
+				    Paso 5: EL sistema confirma la inscripción e imprime comprobante de inscripción y de pago
+
+
+Curso alternativo: Paso alternativo 4.2: EL sistema informa que no se pudo realizar el pago. Fin CU
+
+Postcondiciones: EL sistema confirma la inscripción e imprime comprobante de inscripción y de pago
+
+Escenario 5:
+
+Nombre: Cerrar sesión
+
+Descripción: En este CU se describe como un alumno con un inicio de sesión activa cierra sesión
+
+Actores: Alumno registrado
+
+Precondiciones: Sesión activa
+
+Curso normal: Acciones del actor: Paso 1-El Alumno registrado presiona cerra sesión
+	      			    Paso 3: El Alumno confirma el cierre de sesión
+
+	      Acciones del sistema: Paso 2-El sistema informa que necesita confirmar para cerra la sesión
+				    Paso 4: El sistema cierra la sesión correctamente y deshabilita las acciones del Alumno registrado
+
+Curso alternativo: Paso alternativo 3: El Alumno no confirma el cierre de sesión. Fin CU
+
+Postcondiciones: El sistema cierra la sesión activa, se deshabilita las acciones para el Alumno registrado y se elimina los datos de la sesión
+
+
+Escenario 6:
+
+Nombre: Pagar con tarjeta
+
+Descripción: En este CU se describe el cobro de una carrera de posgrado mediante tarjeta
+
+Actores: Alumno registrado, Servidor externo (banco)
+
+Precondiciones: Se debe haber ejecutado el CU inscribirse a una carrera
+
+Curso normal: Acciones del actor: Paso 2: El Alumno ingresa los datos solicitados 
+				  Paso 4: El servidor externo acepta la conexión y solicita numero de tarjeta y código de seguridad
+				  Paso 6: El servidor externo valida los datos de la tarjeta y el que  tenga saldo suficiente
+				  Paso 7: El servidor externo retorna el resultado
+
+	      Acciones del sistema: Paso 1: El sistema solicita al alumno numero de tarjeta y código de seguridad
+				    Paso 3: El sistema solicita la conexión con el servidor externo
+				    Paso 5: El sistema envía los datos de la tarjeta
+				    Paso 8: El sistema recibe que los datos de la tarjeta son correctos
+				    Paso 9: El sistema recibe que los fondos son suficientes
+				    Paso 10: El sistema registra el pago y cierra la conexión con el servidor externo 
+
+Curso alterno: Paso 3 alternativo: Error al conectar al servidor externo. Se informa el error. Fin de CU
+	       Paso 8 alternativo: La validación de datos de la tarjeta no es correcta. Se informa error en los datos de la tarjeta. Fin de CU
+	       Paso 9 alternativo: La tarjeta no tiene saldo suficiente. Se informa que la tarjeta no tiene fondos suficientes. Fin de CU
+
+Postcondiciones: Se efectúa y registra el pago a traves de la tarjeta
+
+
