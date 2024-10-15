@@ -1,0 +1,75 @@
+Escenario 1:
+
+Nombre: Reciclar
+
+Descripción: En este CU se describe como una persona hace el proceso de reciclar
+
+Actores: Persona
+
+Precondiciones: 
+
+Curso normal: Acciones del actor: Paso 1: La persona ingresa lo que quiere reciclar
+				  Paso 2: La persona presiona "Reciclar"
+
+
+	      Acciones del sistema: Paso 3: El sistema registra el tipo de material
+				    Paso 4: El sistema registra el peso
+				    Paso 5: El sistema imprime un recibo con el monto a pagar a la persona
+
+Curso alterno: Paso 3 alternativo: El sistema no detecta el tipo de material. Se aborta el proceso devolviendo el material. Fin de CU
+
+
+Postcondiciones: Se recicla el material e imprime un recibo con el monto a pagar
+
+
+Escenario 2: 
+
+Titulo: Solicitar listado
+
+Descripción: En este CU se describe como el Operador solicita el listado con los tipos de materiales reciclados en un periodo de fechas
+determinado, detallando además el total abonado por dicho material
+
+Actores: Operador
+
+Precondiciones: 
+
+Curso normal: Acciones del actor: Paso 1: El operador abre la consola bajo llave
+				  Paso 2: Presiona "Solicitar listado de materiales reciclados"
+  				  Paso 4: Ingresa los periodos de fecha que necesita
+
+
+
+	      Acciones del sistema: Paso 3: El sistema solicita el periodo de fechas 
+				    Paso 5: El sistema muestra el listado del material reciclado entre las fechas ingresadas con su total abonado por cada material
+				    Paso 6: EL operador cierra la consola bajo llave
+
+Curso alterno: 
+
+Postcondiciones: Se muestra el listado del material reciclado entre las fechas ingresadas con su total abonado por cada material
+
+
+Escenario 3:
+
+Titulo: Actualizar montos
+
+Descripción: En este CU se describe como el operador actualiza los montos a pagar por kilo de cada tipo de material
+
+Actores: operador
+
+Precondiciones:
+
+Curso normal: Acciones del actor: Paso 1: El operador presiona "Actualizar monto"
+				  Paso 3: El operador ingresa el tipo de material a actualizar
+				  Paso 5: El operador ingresa el nuevo monto
+				  Paso 7: El operador confirma la acción 
+ 
+	      Acciones del sistema: Paso 2: El sistema solicita el tipo de material a actualizar
+				    Paso 4: El sistema solicita el nuevo monto
+				    Paso 6: El sistema solicita confirmación 
+				    Paso 8: El sistema actualiza el nuevo precio por kilo de material seleccionado
+
+Curso alterno: Paso 7 alternativo: El operador no confirma la acción. Fin de CU
+
+
+Postcondiciones: Se actualiza el nuevo precio por kilo de material seleccionado
+
