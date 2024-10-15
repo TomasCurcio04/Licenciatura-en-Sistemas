@@ -1,0 +1,105 @@
+Escenario 1:
+
+Nombre: Confeccionar minuta
+
+Descripción: En este CU se describe como el empleado de mesa de entradas confecciona una minuta
+
+Actores: Empleado de mesa de entradas
+
+Precondiciones: --
+
+Curso normal: Acciones del actor: Paso 1- El empleado de mesa de entradas presiona confeccionar minuta
+
+				  Paso 3- El empleado ingresa los datos solicitados				  
+
+	      Acciones del sistema: Paso 2-El sistema pide los siguientes datos nombre, n mero de CUIT , tipo de contrato, fecha de comienzo, duración y monto. 
+
+				    Paso 4-El sistema valida que el monto no supere los 25000
+
+				    Paso 5-El sistema valida que la duración no supere los 6 meses
+
+				    Paso 6: El sistema confecciona la minuta exitosamente y a esta se le asocia un numero automáticamente
+
+
+Curso alterno: Paso alternativo 4- El sistema no puede confeccionar la minuta e informa que el monto no puede ser mayor a 25000. Vuelve al paso 2
+	       Paso alternativo 5- El sistema no puede confeccionar la minuta e informa que la duración no puede ser mayor a 6 meses. Vuelve al paso 2 
+
+Postcondiciones: La confección de la minuta se realiza exitosamente y a esta se le asocia un numero automáticamente
+
+
+
+
+Escenario 2:
+
+Nombre: Aprobar minuta
+
+Descripción: En este CU se describe como el el empleado de rendiciones aprueba una minuta
+
+Roles: Empleado de rendiciones
+
+Precondiciones: Haya una minuta pendiente de aprobar
+
+Curso normal: Acciones del actor: Paso 1-El empleado de rendiciones presiona aprobar una minuta
+				  Paso 3-El empleado ingresa el numero de minuta
+
+	      Acciones del sistema: Paso 2-El sistema pide los que ingrese el numero de minuta
+				    Paso 4-El sistema muestra los datos de la minuta
+				    Paso 5-El sistema verifica que la persona no tenga mas de 3 contratos vigentes
+				    Paso 6-Se ejecuta el CU Comprobar CUIT
+				    Paso 7-El sistema aprueba la minuta
+				    
+Curso alterno: Paso 5 alternativo: El sistema no puede aprobar la minuta e informa que la persona tiene mas de 3 contratos vigentes. Fin CU
+	      Paso 6 alternativo: El sistema no puede aprobar la minuta e informa que la persona esta inhabilitado por la AFIP. Fin de CU
+
+
+
+
+Postcondiciones: Se aprueba una minuta
+
+
+Escenario 3: 
+
+Nombre: Comprobar CUIT
+
+Descripción: Este CU describe como se comprueba si un CUIT esta habilitado
+
+Actores: Servidor externo  (AFIP)
+
+Precondiciones: Haberse ejecutado el CU Aprobar minuta
+
+Curso normal: Acciones del actor: Paso 2-El servidor de la AFIP verifica el TOKEN
+				  Paso 3-El servidor de la AFIP verifica si la persona esta habilitado y lo retorna
+				  Paso 4- El servidor de la AFIP retorna el resultado
+
+	      Acciones del sistema: Paso 1-El sistema envía un TOKEN y el CUIT de la persona
+				    Paso 5-El sistema recibe el resultado de la verificación y lo retorna
+
+
+Curso alterno: Paso 2 alternativo: El TOKEN es invalido. Fin de CU
+
+
+Postcondiciones: Se retorna el resultado de la verificación 
+
+
+Escenario 4: 
+
+Nombre: Imprimir minutas aprobadas
+
+Descripción: En este CU se describe como el empleado de rendiciones imprime las minutas aprobadas
+
+Actores: Empleado de rendiciones
+
+Precondiciones: 
+
+Curso normal: Acciones del actor: Paso 1: El empleado de rendiciones presiona "Imprimir Minutas"
+				  Paso 3: El empleado de rendiciones confirma la acción 
+
+	      Acciones del sistema: Paso 2: El sistema muestras las minutas aprobadas y solicita confirmación 
+				    Paso 4: El sistema imprime las minutas
+
+
+Curso alterno: Paso 3 alternativo: El empleado de rendiciones cancela la acción. Fin de CU
+
+
+Postcondiciones: Se imprime las minutas aprobadas
+
