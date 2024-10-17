@@ -7,7 +7,7 @@ fi
 case $1 in
 	"+") echo "La suma entre los dos numeros es de: $(( $2 + $3 ))"
 	;;
-	"-") echo "La resta entre los doos numeros es de: $(($2 - $3 )) "
+	"-") echo "La resta entre los dos numeros es de: $(($2 - $3 )) "
 	;;
 	"*") echo "La multiplicacion entre los dos numeros es de: $(($2 * $3))"
 	;;
