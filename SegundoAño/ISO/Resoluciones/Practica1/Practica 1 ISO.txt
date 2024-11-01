@@ -378,10 +378,10 @@ Define la ubicación de gestor de arranque
 • Define la interfaz entre el gestor de arranque y el firmware
 • Expone información para los gestores de arranque con:
 	• Información de hardware y configuración del firmware
-	• Punteros a rutinas que implementan los servicios que el firmware ofrece a 		los bootloaders u otras aplicaciones UEFI
-	• Provee un BootManager para cargar aplicaciones UEFI (ej.: Grub) y drivers 		desde un UEFI filesystem
+	• Punteros a rutinas que implementan los servicios que el firmware ofrece a los bootloaders u otras aplicaciones UEFI
+	• Provee un BootManager para cargar aplicaciones UEFI (ej.: Grub) y drivers desde un UEFI filesystem
 	• El booloader ahora es un tipo de aplicación UEFI:
-		• El Grub será una aplicación UEFI, que reside en el UEFI filesystem donde  		 los drivers necesarios para arrancar el sistema operativo (FAT32)
+		• El Grub será una aplicación UEFI, que reside en el UEFI filesystem donde los drivers necesarios para arrancar el sistema operativo (FAT32)
 		• Para el Grub deja de ser necesario el arranque en varias etapas.
 
 8-c
