@@ -271,7 +271,7 @@ Es la forma en que dentro de un SO se organizan y administran los archivos. Esta
 Algunos de los sistemas de archivos soportados por GNU/Linux son ext3, ext4, ReiserFS, y XFS.
 
 6-c 
-Linux no permite ver por defecto el contenido de las particiones de Windows. Para poder hacerlo será necesario que montemos la partición NTFS o FAT en la que está Windows. Aunque en estos momentos existen distribuciones de GNU-Linux que pueden realizar operaciones de lectura y escritura sobre ellas. El Kernel de Unix tiene soporte para el manejo de particiones FAT,NTFS
+Si, es posible
 
 6-d 
 La estructura básica de los sistemas de archivos en GNU/Linux se organiza de forma jerárquica. 
