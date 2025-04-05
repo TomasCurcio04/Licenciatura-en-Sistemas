@@ -7,10 +7,14 @@ begin
 	for i:=1 to 1000 do begin
 		writeln('ingrese un numero');
 		readln(num);
-		if(min2>num) then begin
-			min2:=min1;
-			min1:=num;
-		end;
+		if(num < min1) then
+                begin
+                    min2:= min1;
+                    min1:= num;
+                end
+            else
+                if(num < min2) then
+                    min2:= num;
 	end;
 	writeln('los dos numeros minimos leidos son: ',min1,' y ',min2);
 	//////////////////////////
@@ -20,10 +24,14 @@ begin
 	repeat
 		writeln('ingrese un numero');
 		readln(num);
-		if(min2>num) then begin
-			min2:=min1;
-			min1:=num;
-		end;
+		if(num < min1) then
+                begin
+                    min2:= min1;
+                    min1:= num;
+                end
+            else
+                if(num < min2) then
+                    min2:= num;
 	until (num=0);
 	writeln('los dos numeros minimos leidos son: ',min1,' y ',min2);
 	/////////////////////////
@@ -33,10 +41,14 @@ begin
 	writeln('ingrese un numero');
 	readln(num);
 	while(num<>0) do begin
-		if(min2>num) then begin
-			min2:=min1;
-			min1:=num;
-		end;
+		if(num < min1) then
+                begin
+                    min2:= min1;
+                    min1:= num;
+                end
+            else
+                if(num < min2) then
+                    min2:= num;
 		writeln('ingrese un numero');
 		readln(num);
 	end;
