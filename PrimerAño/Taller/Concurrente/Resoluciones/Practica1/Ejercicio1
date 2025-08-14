@@ -1,0 +1,35 @@
+programa Practica1Ejercicio1
+procesos
+  proceso juntarFlores(ES cant:numero; ES esqSin:numero)
+  comenzar
+    si (HayFlorEnLaEsquina)
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        cant:=cant+1
+    sino
+      esqSin:=esqSin+1
+  fin
+areas
+  Ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    cant,esqSin:numero
+  comenzar
+    cant:=0
+    esqSin:=0
+    repetir 99
+      juntarFlores(cant,esqSin)
+      mover
+    juntarFlores(cant,esqSin)
+    repetir cant
+      depositarFlor
+    Informar(cant)
+    Informar(esqSin)
+  fin
+variables
+  robot1: robot1
+comenzar
+  AsignarArea(robot1, Ciudad)
+  Iniciar(robot1,1,1)
+fin
