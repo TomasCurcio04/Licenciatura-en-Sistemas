@@ -1,0 +1,111 @@
+programa Final4Diciembre
+procesos
+  proceso juntarFlores(ES f:numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      f:=f+1
+  fin
+  proceso bloquear(E avenida:numero ; E calle:numero; E av:numero ; E ca:numero; E flor:numero)
+  comenzar
+    Pos(avenida,calle)
+    repetir flor
+      depositarFlor
+    Pos(av,ca)
+  fin
+areas
+  areaHAzul: AreaP(9,20,18,20)
+  areaVAzul: AreaP(19,21,19,29)
+  areaHVerde: AreaP(22,20,31,20)
+  areaVVerde: AreaP(21,21,21,29)
+  areaPC: AreaPC(20,20,20,20)
+  areaPCAzul: AreaPC(19,20,19,20)
+  areaPCVerde: AreaPC(21,20,21,20)
+  
+robots
+  robot vertical
+  variables
+    f:numero
+    equipo,av,ca:numero
+  comenzar
+    f:=0
+    repetir 2
+      derecha
+    repetir 8
+      juntarFlores(f)
+      mover
+    juntarFlores(f)
+    av:=PosAv
+    ca:=PosCa
+    RecibirMensaje(equipo,*)
+    si (equipo=1)
+      bloquear(19,20,av,ca,f)
+      EnviarMensaje(V,robot1)
+    sino 
+      bloquear(21,20,av,ca,f)
+      EnviarMensaje(V,robot3)
+  fin
+  robot horizontal
+  variables
+    f:numero
+    depositadas:boolean
+  comenzar
+    EnviarMensaje(1,robot2)
+    f:=0
+    derecha
+    repetir 9
+      juntarFlores(f)
+      mover
+    RecibirMensaje(depositadas,robot2)
+    mover
+    juntarFlores(f)
+    repetir f
+      BloquearEsquina(20,20)
+      Pos(20,20)
+      depositarFlor
+      Pos(19,20)
+      LiberarEsquina(20,20)
+  fin
+  robot horizontal2
+  variables
+    f:numero
+    depositadas:boolean
+  comenzar
+    EnviarMensaje(2,robot4)
+    f:=0
+    repetir 3
+      derecha
+    repetir 9
+      juntarFlores(f)
+      mover
+    RecibirMensaje(depositadas,robot4)
+    mover
+    juntarFlores(f)
+    repetir f
+      BloquearEsquina(20,20)
+      Pos(20,20)
+      depositarFlor
+      Pos(31,20)
+      LiberarEsquina(20,20)
+  fin
+variables
+  robot1: horizontal
+  robot2: vertical
+  robot3: horizontal2
+  robot4: vertical
+comenzar
+  AsignarArea(robot1,areaHAzul)
+  AsignarArea(robot2,areaVAzul)
+  AsignarArea(robot3,areaHVerde)
+  AsignarArea(robot4,areaVVerde)
+  AsignarArea(robot1,areaPC)
+  AsignarArea(robot3,areaPC)
+  AsignarArea(robot1,areaPCAzul)
+  AsignarArea(robot2,areaPCAzul)
+  AsignarArea(robot3,areaPCVerde)
+  AsignarArea(robot4,areaPCVerde)
+  Iniciar(robot1,9,20)
+  Iniciar(robot2,19,29)
+  Iniciar(robot3,31,20)
+  Iniciar(robot4,21,29)
+fin
