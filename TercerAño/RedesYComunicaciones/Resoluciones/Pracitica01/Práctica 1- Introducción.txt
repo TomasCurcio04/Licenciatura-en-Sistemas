@@ -1,0 +1,153 @@
+Práctica 1- Introducción
+1. ¿Qué es una red? ¿Cuál es el principal objetivo para construir una red?
+
+Una red de Computadoras: un grupo decomputadoras/dispositivos interconectados.
+Objetivo: compartir recursos: dispositivos, informacion, servicios.
+
+2. ¿Qué es Internet? Describa los principales componentes que permiten su funcionamiento.
+
+Es una red de redes de computadoras, descentralizada, publica, que ejecutan el conjunto abierto de protocolos (suite) TCP/IP. Integra diferentes protocolos de un nivel mas bajo.
+Los principales componentes que permiten su funcionamiento estan en el modelo TCP/IP que se divide en 4 capas 
+
+-Acceso a la red 
+-Internet
+-Transporte 
+-Aplicación
+
+3. ¿Qué son las RFCs?
+
+Las RFCs (Request for Comments) son documentos oficiales donde se describen, definen y estandarizan las tecnologías, protocolos y prácticas que hacen funcionar Internet.
+
+
+4. ¿Qué es un protocolo?
+
+Protocolo: El conjunto de conductas y normas a conocer, respetar y cumplir no solo en el medio oficial ya establecido, sino tambien en el medio social, laboral,etc.
+Un protocolo define el formato, el orden de los mensajes intercambiados y las acciones que se llevan a cabo en la transmision y/o recepcion de un mensaje u otro evento
+
+
+5. ¿Por qué dos máquinas con distintos sistemas operativos pueden formar parte de una misma red?
+
+Gracias a la implementacion del modelo TCP/IP, que es el conjunto de protocolos que hace posible la comunicación en Internet, independientemente del sistema operativo.
+
+6. ¿Cuáles son las 2 categorías en las que pueden clasificarse a los sistemas finales o End
+Systems? Dé un ejemplo del rol de cada uno en alguna aplicación distribuida que corra
+sobre Internet
+
+Los sistemas finales (End Systems) se clasifican en dos categorías:
+
+Clientes → son los que inician la comunicación y solicitan servicios.
+Ejemplo: en la Web, tu navegador (cliente) pide una página a un servidor web.
+
+Servidores → son los que ofrecen servicios y responden a las solicitudes.
+Ejemplo: un servidor de Google que envía los resultados de búsqueda a los clientes.
+
+
+7. ¿Cuál es la diferencia entre una red conmutada de paquetes de una red conmutada de
+circuitos
+Red conmutada de circuitos:
+Define un camino físico dedicado entre emisor y receptor durante toda la comunicación.
+Ejemplo: la telefonía tradicional (PSTN), donde se reserva un canal fijo para la llamada.
+Ventajas: conexión continua, latencia baja y estable.
+Desventajas: ineficiencia, porque el canal queda ocupado aunque no haya transmisión de datos.
+
+Red conmutada de paquetes:
+Divide los datos en paquetes que viajan de forma independiente a través de la red.
+Ejemplo: Internet, donde los paquetes pueden tomar distintas rutas hasta llegar al destino.
+Ventajas: mejor aprovechamiento del ancho de banda, más usuarios pueden compartir la red.
+Desventajas: los paquetes pueden llegar con retraso, desordenados o perderse → se necesita un protocolo (ej. TCP) para asegurar entrega.
+
+8. Analice qué tipo de red es una red de telefonía y qué tipo de red es Internet
+
+Red de telefonía tradicional (PSTN)
+Es una red conmutada de circuitos.
+Cada vez que haces una llamada, la red establece un canal dedicado entre tu teléfono y el del receptor, que se mantiene activo durante toda la comunicación.
+Ejemplo: las líneas telefónicas clásicas.
+
+Internet
+Es una red conmutada de paquetes.
+La informaci
+ón (texto, voz, video, etc.) se divide en paquetes que viajan de manera independiente, posiblemente por distintas rutas, hasta recomponerse en destino.
+Ejemplo: cuando hacés una videollamada por WhatsApp, tu voz se trocea en paquetes IP.
+
+9. Describa brevemente las distintas alternativas que conoce para acceder a Internet en su
+hogar.
+Wi-Fi:
+Me conecto mediante un router que recibe Internet por fibra óptica y lo distribuye inalámbricamente dentro de mi casa.
+Internet móvil 4G:
+Uso la red de mi operador móvil a través de mi celular para conectarme
+
+10. ¿Qué ventajas tiene una implementación basada en capas o niveles?
+
+Ventajas de un modelo en capas o niveles
+
+División del trabajo → cada capa tiene una función específica y más simple de implementar.
+
+Independencia → los cambios en una capa no afectan directamente a las otras.
+
+Interoperabilidad → sistemas diferentes pueden comunicarse si respetan las mismas capas y protocolos.
+
+Facilidad de mantenimiento y actualización → se pueden mejorar o reemplazar partes de la red sin afectar todo el sistema.
+
+Reutilización → protocolos o servicios de una capa pueden ser usados por múltiples aplicaciones o capas superiores.
+
+ 11. ¿Cómo se llama la PDU de cada una de las siguientes capas: Aplicación, Transporte,
+ Red y Enlace?
+
+PDU (Unidad de Datos de Protocolo) según la capa
+
+Capa de Aplicación → Mensaje
+
+Capa de Transporte → Segmento (si usa TCP) o Datagrama (si usa UDP)
+
+Capa de Red → Paquete
+
+Capa de Enlace de Datos → Trama
+
+12. ¿Qué es la encapsulación? Si una capa realiza la encapsulación de datos, ¿qué capa del nodo receptor realizará el proceso inverso?
+
+La encapsulación es el proceso por el cual cada capa del modelo de red añade su propia información de control (cabeceras o trailers) a los datos recibidos de la capa superior, formando la PDU correspondiente.
+
+En el receptor, el proceso inverso se llama desencapsulación, y lo realiza la capa equivalente a la que encapsuló en el emisor (ejemplo: si la capa de transporte encapsula, la capa de transporte del receptor desencapsula).
+
+ 13. Describa cuáles son las funciones de cada una de las capas del stack TCP/IP o protocolo de Internet.
+
+.Funciones de las capas del stack TCP/IP
+
+El modelo TCP/IP tiene 4 capas principales:
+	
+1-Capa de Acceso a la Red (Enlace + Física en OSI)
+	-Define cómo se transmiten los bits en el medio (Ethernet, Wi-Fi).
+	-Direccionamiento físico (MAC), control de acceso, detección de errores.
+
+2-Capa de Internet (equivalente a Red en OSI)
+	-Direccionamiento lógico (IP).
+	-Encaminamiento de paquetes entre redes.
+	-Protocolos: IP, ICMP, ARP.
+
+3-Capa de Transporte
+	-Comunicación extremo a extremo.
+	-Control de flujo, fiabilidad, segmentación.
+	-Protocolos: TCP, UDP.
+
+4-Capa de Aplicación
+	-Servicios al usuario y aplicaciones distribuidas.
+	-Protocolos: HTTP, FTP, DNS, SMTP, POP3, IMAP.
+
+14. Compare el modelo OSI con la implementación TCP/IP.
+
+Diferencias entre OSI y TCP/IP
+
+Número de capas: OSI: 7 capas.
+		 TCP/IP: 4 capas (más simple).
+
+Capa de Aplicación: OSI: divide en Aplicación, Presentación y Sesión.
+       		    TCP/IP: combina esas tres funciones en una sola capa de Aplicación.
+
+Capas bajas: OSI: separa en Enlace de Datos y Física.
+	     TCP/IP: las combina en una sola capa llamada Acceso a la Red.
+
+Origen y uso: OSI: es un modelo teórico y de referencia, usado para enseñanza y conceptualización.
+		   TCP/IP: es un modelo práctico e implementado, base real de Internet.
+
+Protocolos: OSI: no define protocolos específicos, solo funciones.
+	    TCP/IP: está basado en protocolos reales (IP, TCP, UDP, HTTP, etc.), lo que le dio credibilidad y adopción.
